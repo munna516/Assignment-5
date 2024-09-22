@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-5</title>
+    <!-- Lexend Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Daisy UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Customization -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-color": '#B4F461',
+                        "color-1": '#111111',
+                        "color-2": 'rgba(17, 17, 17, 0.7)',
+                    },
+                    fontFamily: {
+                        lexend: 'Lexend',
+                    }
+
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-lexend">
+    <!-- Header Section -->
+    <header class="sticky top-0 w-full z-10 bg-white">
+        <nav class=" bg-[#F9F7F3]">
+            <div class="space-y-5 md:flex md:justify-between w-11/12 mx-auto pt-2 pb-7">
+                <div class="flex justify-center items-center">
+                    <a href="./index.html">
+                        <button class="btn rounded-lg cursor-pointer px-11 bg-primary-color text-xl">Home</button>
+                    </a>
+                </div>
+                <div class="flex justify-center items-center gap-4">
+                    <div>
+                        <img src="./Images/logo.png" alt="">
+                    </div>
+                    <div>
+                        <h1 class="text-color-1 text-xl font-semibold">Donate Bangladesh </h1>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center gap-3">
+                    <div>
+                        <img src="./Images/coin.png" alt="">
+                    </div>
+                    <div>
+                        <h1 class="text-color-2 text-xl font-semibold">5500 BDT</h1>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main class="w-11/12 mx-auto mt-10">
+        <section>
+            <h1 class="text-4xl font-bold">Important FAQ</h1>
+            <div class="mt-10">
+                <div class="join join-vertical w-full">
+                    <div class="collapse collapse-arrow join-item border-base-300 border">
+                        <input type="radio" name="my-accordion-4" checked="checked" />
+                        <div class="collapse-title text-xl font-medium">What is Document Object Model (DOM) ?</div>
+                        <div class="collapse-content">
+                            <p class="text-color-2">The Document Object Model (DOM) is a programming interface for web
+                                documents. It
+                                represents the structure of an HTML or XML document as a tree of objects, where each
+                                element is a node in the tree. </p>
+                        </div>
+                    </div>
+                    <div class="collapse collapse-arrow join-item border-base-300 border">
+                        <input type="radio" name="my-accordion-4" />
+                        <div class="collapse-title text-xl font-medium">How do you select the element from the DOM?
+                        </div>
+                        <div class="collapse-content">
+                            <p class="text-color-2">I can select the Element using
+                                getElementById(),getElementsByClass(), getElementsByTagName(), querySelector() function
+                            </p>
+                        </div>
+                    </div>
+                    <div class="collapse collapse-arrow join-item border-base-300 border">
+                        <input type="radio" name="my-accordion-4" />
+                        <div class="collapse-title text-xl font-medium">What is event deligation in the context of DOM?
+                        </div>
+                        <div class="collapse-content">
+                            <p class="text-color-2">Event delegation is a technique in JavaScript where a single event
+                                listener is attached to a parent element to manage events for all of its child elements
+                            </p>
+                        </div>
+                    </div>
+                    <div class="collapse collapse-arrow join-item border-base-300 border">
+                        <input type="radio" name="my-accordion-4" />
+                        <div class="collapse-title text-xl font-medium">How do You manipulate an elements attribute and
+                            styles using DOM?</div>
+                        <div class="collapse-content">
+                            <p class="text-color-2">You can use methods like getAttribute(), setAttribute(),
+                                removeAttribute(), and direct property manipulation to change an element's attributes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+
+    </main>
+
+
+</body>
+
+</html>
