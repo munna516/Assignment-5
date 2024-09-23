@@ -124,7 +124,7 @@ document.getElementById('donate-now-3').addEventListener('click', function (even
             mainBalanceUpdate(newMainBalance)
             inputBalanceUpdate('quota-movement', inputBalance)
             historyAdd(inputBalance, 'history-3')
-            const modal_5 = document.getElementById('my_modal_3')
+            const modal_5 = document.getElementById('my_modal_5')
             modal_5.showModal()
         }
     }
