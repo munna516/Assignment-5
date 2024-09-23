@@ -56,9 +56,11 @@ document.getElementById('donate-now-1').addEventListener('click', function (even
     const inputField = document.getElementById('input-field-1').value
     const mainBalance = amount('main-balance')
     const inputBalance = parseInt(inputField)
+
     if (isNaN(inputField) === false && parseInt(inputField) >= 0) {
         if (mainBalance < inputBalance) {
             alert("INSUFFICIENT BALANCE")
+            return false
         }
         else {
             document.getElementById('input-field-1').value = ''
@@ -66,10 +68,13 @@ document.getElementById('donate-now-1').addEventListener('click', function (even
             mainBalanceUpdate(newMainBalance)
             inputBalanceUpdate('donation-of-noakhali', inputBalance)
             historyAdd(inputBalance, 'history-1')
+            const modal_1 = document.getElementById('my_modal_1')
+            modal_1.showModal()
         }
     }
     else {
         alert('INVALID INPUT')
+        return
 
     }
 
@@ -92,6 +97,8 @@ document.getElementById('donate-now-2').addEventListener('click', function (even
             mainBalanceUpdate(newMainBalance)
             inputBalanceUpdate('donation-of-feni', inputBalance)
             historyAdd(inputBalance, 'history-2')
+            const modal_2 = document.getElementById('my_modal_2')
+            modal_2.showModal()
         }
     }
     else {
@@ -117,6 +124,8 @@ document.getElementById('donate-now-3').addEventListener('click', function (even
             mainBalanceUpdate(newMainBalance)
             inputBalanceUpdate('quota-movement', inputBalance)
             historyAdd(inputBalance, 'history-3')
+            const modal_5 = document.getElementById('my_modal_3')
+            modal_5.showModal()
         }
     }
     else {
