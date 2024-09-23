@@ -14,17 +14,41 @@ function amount(id) {
 // Main Balance Calculation
 function mainBalanceUpdate(newMainBalance) {
     const balance = getElementByIdFunct('main-balance')
-    console.log(balance)
+
     balance.innerText = newMainBalance
 }
 
 // Input Balance Update
 function inputBalanceUpdate(id, inputBalance) {
     const tk = amount(id)
-    console.log(tk)
     const balance = getElementByIdFunct(id)
-    console.log(balance)
     balance.innerText = tk + inputBalance
+}
+
+// History Add Function
+function historyAdd(balance, id) {
+    const div = document.createElement('div')
+    const p1 = document.createElement('p')
+    const p2 = document.createElement('p')
+    const text = document.getElementById(id).innerText
+    p1.innerText = `${balance} TK is ${text}`
+
+    // Finding live time 
+    const now = new Date();
+    const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'];
+    const dayName = daysOfWeek[now.getDay()];
+    const date = now.toLocaleDateString();
+    const time = now.toLocaleTimeString();
+    p2.innerText = `Date : ${dayName} ${date} ${time} GMT +0600 (Bangladesh Standard Time)`
+
+    // class add
+    p1.classList.add('text-xl', 'font-semibold', 'text-color-1')
+    p2.classList.add('text-color-2', 'text-normal')
+    div.classList.add('p-8', 'border', 'border-gray-300', 'rounded-lg', 'space-y-3')
+    div.appendChild(p1)
+    div.appendChild(p2)
+    document.getElementById('history-section').appendChild(div)
+
 }
 
 // Flood at Noakhali, Donate Now Section
@@ -41,6 +65,7 @@ document.getElementById('donate-now-1').addEventListener('click', function (even
             const newMainBalance = mainBalance - inputBalance
             mainBalanceUpdate(newMainBalance)
             inputBalanceUpdate('donation-of-noakhali', inputBalance)
+            historyAdd(inputBalance, 'history-1')
         }
     }
     else {
@@ -66,6 +91,7 @@ document.getElementById('donate-now-2').addEventListener('click', function (even
             const newMainBalance = mainBalance - inputBalance
             mainBalanceUpdate(newMainBalance)
             inputBalanceUpdate('donation-of-feni', inputBalance)
+            historyAdd(inputBalance, 'history-2')
         }
     }
     else {
@@ -90,6 +116,7 @@ document.getElementById('donate-now-3').addEventListener('click', function (even
             const newMainBalance = mainBalance - inputBalance
             mainBalanceUpdate(newMainBalance)
             inputBalanceUpdate('quota-movement', inputBalance)
+            historyAdd(inputBalance, 'history-3')
         }
     }
     else {
