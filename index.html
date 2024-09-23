@@ -64,10 +64,10 @@
         </nav>
         <div class="w-11/12 mx-auto pb-5">
             <div class="text-center mt-4">
-                <button
-                    class="btn rounded-lg  text-color-1 text-xl bg-primary-color cursor-pointer font-semibold">Donation</button>
-                <button
-                    class="btn rounded-lg  text-color-2 text-xl border border-gray-400 ml-2 cursor-pointer">History</button>
+                <button id="donation"
+                    class="btn rounded-lg  text-color-1 text-xl bg-primary-color border border-gray-300 cursor-pointer font-semibold">Donation</button>
+                <button id="history"
+                    class="btn rounded-lg  text-color-2 text-xl border border-gray-300 ml-2 cursor-pointer">History</button>
             </div>
         </div>
     </header>
@@ -75,7 +75,7 @@
     <!-- Main Section -->
     <main class="w-11/12 mx-auto ">
         <!-- Section 1 -->
-        <section class="mt-12">
+        <section id="section-1" class="mt-12">
             <div class="lg:flex gap-8 items-center justify-center p-8 border border-gray-300 rounded-xl space-y-5">
                 <div class="flex-1">
                     <img class="w-full lg:h-[395px]" src="./Images/noakhali.png" alt="">
@@ -132,7 +132,7 @@
         </section>
 
         <!-- Section  2 -->
-        <section class="mt-12">
+        <section id="section-2" class="mt-12">
             <div class="lg:flex gap-8 items-center justify-center p-8 border border-gray-300 rounded-xl space-y-5">
                 <div class="flex-1">
                     <img class="w-full lg:h-[430px]" src="./Images/feni.png" alt="">
@@ -189,7 +189,7 @@
         </section>
 
         <!-- section 3 -->
-        <section class="mt-12">
+        <section id="section-3" class="mt-12">
             <div class="lg:flex gap-8 items-center justify-center p-8 border border-gray-300 rounded-xl space-y-5">
                 <div class="flex-1">
                     <img class="w-full lg:h-[450px]" src="./Images/quota-protest.png" alt="">
@@ -245,12 +245,20 @@
 
             </div>
         </section>
+
+        <!-- History section -->
+        <section id="history-section" class="hidden">
+            <p>History Section</p>
+        </section>
     </main>
 
     <!-- Footer Section -->
     <footer class="h-[100px] bg-[#F9F7F3] mt-14">
 
     </footer>
+
+    <!-- Javascript Add-->
+    <script src="./JS/history.js"></script>
 </body>
 
 </html>
