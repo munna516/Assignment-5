@@ -57,7 +57,7 @@
                         <img src="./Images/coin.png" alt="">
                     </div>
                     <div>
-                        <h1 class="text-color-2 text-xl font-semibold">5500 BDT</h1>
+                        <h1 class="text-color-2 text-xl font-semibold"><span id="main-balance">5500</span> BDT</h1>
                     </div>
                 </div>
             </div>
@@ -87,7 +87,8 @@
                             <img src="./Images/coin.png" alt="">
                         </div>
                         <div>
-                            <h1 class="text-color-2 text-xl font-semibold">0 BDT</h1>
+                            <h1 class="text-color-2 text-xl font-semibold"><span id="donation-of-noakhali">0</span> BDT
+                            </h1>
                         </div>
                     </div>
                     <div>
@@ -103,11 +104,12 @@
                     </div>
                     <div class="space-y-3">
                         <div>
-                            <input class="border-2 p-3 w-full rounded-lg border-gray-300" type="text"
+                            <input id="input-field-1" class="border-2 p-3 w-full rounded-lg border-gray-300" type="text"
                                 placeholder="Write Donation Amount">
                         </div>
                         <div class="text-center">
-                            <button class="btn bg-primary-color w-full text-xl font-semibold text-color-1"
+                            <button id="donate-now-1"
+                                class="btn bg-primary-color w-full text-xl font-semibold text-color-1"
                                 onclick="my_modal_1.showModal()">Donate Now</button>
                             <dialog id="my_modal_1" class="modal modal-bottom sm:modal-middle">
                                 <div class="modal-box space-y-5">
@@ -125,8 +127,10 @@
                                 </div>
                             </dialog>
                         </div>
+
                     </div>
                 </div>
+            </div>
 
             </div>
         </section>
@@ -144,7 +148,7 @@
                             <img src="./Images/coin.png" alt="">
                         </div>
                         <div>
-                            <h1 class="text-color-2 text-xl font-semibold">0 BDT</h1>
+                            <h1 class="text-color-2 text-xl font-semibold"><span id="donation-of-feni">0</span> BDT</h1>
                         </div>
                     </div>
                     <div>
@@ -160,11 +164,12 @@
                     </div>
                     <div class="space-y-3">
                         <div>
-                            <input class="border-2 p-3 w-full rounded-lg border-gray-300" type="text"
+                            <input id="input-field-2" class="border-2 p-3 w-full rounded-lg border-gray-300" type="text"
                                 placeholder="Write Donation Amount">
                         </div>
                         <div class="text-center">
-                            <button class="btn bg-primary-color w-full text-xl font-semibold text-color-1"
+                            <button id="donate-now-2"
+                                class="btn bg-primary-color w-full text-xl font-semibold text-color-1"
                                 onclick="my_modal_2.showModal()">Donate Now</button>
                             <dialog id="my_modal_2" class="modal modal-bottom sm:modal-middle">
                                 <div class="modal-box space-y-5">
@@ -201,7 +206,7 @@
                             <img src="./Images/coin.png" alt="">
                         </div>
                         <div>
-                            <h1 class="text-color-2 text-xl font-semibold">0 BDT</h1>
+                            <h1 class="text-color-2 text-xl font-semibold"><span id="quota-movement">0</span> BDT</h1>
                         </div>
                     </div>
                     <div>
@@ -218,11 +223,12 @@
                     </div>
                     <div class="space-y-3">
                         <div>
-                            <input class="border-2 p-3 w-full rounded-lg border-gray-300" type="text"
+                            <input id="input-field-3" class="border-2 p-3 w-full rounded-lg border-gray-300" type="text"
                                 placeholder="Write Donation Amount">
                         </div>
                         <div class="text-center">
-                            <button class="btn bg-primary-color w-full text-xl font-semibold text-color-1"
+                            <button id="donate-now-3"
+                                class="btn bg-primary-color w-full text-xl font-semibold text-color-1"
                                 onclick="my_modal_5.showModal()">Donate Now</button>
                             <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
                                 <div class="modal-box space-y-5">
@@ -259,6 +265,7 @@
 
     <!-- Javascript Add-->
     <script src="./JS/history.js"></script>
+    <script src="./JS/index.js"></script>
 </body>
 
 </html>
